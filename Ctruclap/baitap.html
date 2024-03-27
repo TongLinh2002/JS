@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<!-- ĐỀ BÀI :
+Cấu trúc lặp:
+1. Viết một chương trình JavaScript để tính tổng các số từ 1 đến n 
+(n là một số nguyên dương được nhập từ bàn phím) bằng cách sử dụng vòng lặp for.
+2. Viết một chương trình JavaScript để tính giai thừa của một số n 
+(n là một số nguyên dương được nhập từ bàn phím) bằng cách sử dụng vòng lặp while.
+3. Viết một chương trình JavaScript để in ra bảng cửu chương từ 2 đến 9 
+bằng cách sử dụng vòng lặp lồng nhau. -->
+<script>
+    function tinhTong(n){
+        let sum = 0;
+        for (let i = 1; i <= n; i++){
+            sum += i;
+        } return sum;
+    }
+    let n = parseInt(prompt("Nhập số nguyên dương n:"))
+    let tong = tinhTong(n);
+    
+    console.log("Tổng các số từ 1 đến " + n +" là :" + tong);
+    console.log("---------------")
+    
+    function tinhGiaiThua(k){
+        let giaiThua = 1;
+        let i = 1 ;
+        while (i <= k){
+            giaiThua *= i;
+            i++;
+        }
+        return giaiThua;
+    }
+    let k = parseInt(prompt("Nhập số nguyên dương k:"))
+    let giaiThua = tinhGiaiThua(k);
+    console.log("Giai thừa của " + k + " là : " + giaiThua);
+    
+    console.log("---------------")
+    function inCuuChuong(){
+        for( let i = 2; i <= 9 ; i++){
+            console.log("Bảng Cửu Chương của "+ i + ": ");
+        for (let j = 1; j <= 10; j++ ){
+            console.log( i+ " x " + j + " = " + i* j);
+        }
+        console.log("\n");
+        }
+    }
+    inCuuChuong();
+</script>
+</html>
